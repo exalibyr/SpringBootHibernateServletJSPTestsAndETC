@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.html</location>
+  </error-page>
+  <error-page>
+  	<exception-type>java.lang.Throwable</exception-type>
+  	<location>/error.jsp</location>
+  </error-page>
+  <servlet>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Bye</servlet-name>
+    <servlet-class>ByeServlet</servlet-class>
+    <init-param>
+      <param-name>mes2</param-name>
+      <param-value>By VSAUCE! MICHAEL OUT!</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/welcome</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Bye</servlet-name>
+    <url-pattern>/goodBye</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>mes</param-name>
+    <param-value>Hi VSAUCE! MICHAEL HERE!</param-value>
+  </context-param>
+</web-app>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Регистрация бесплатно без смс!!!</title>
+</head>
+<body>
+	<form action="FromServlet" method="POST">
+	Name: <input name="username"/>
+	<br><br>
+	Age: <input name="userage" type="number" min=1/>
+	<br><br>
+	Gender: <input name="usergender" type="radio" value="female" checked /> Female
+	<input name="usergender" type="radio" value="male"/> Male
+	<br><br>
+	Country: <select name="usercountry">
+		<option>Iran</option>
+		<option>Turkey</option>
+		<option>China</option>
+		<option>Germany</option>
+		<option>USA</option>
+	</select>
+	<br><br>
+	Courses: 
+	<input type="checkbox" name="courses" value="JavaSE"> JavaSE
+	<input type="checkbox" name="courses" value="JavaFX"> JavaFX
+	<input type="checkbox" name="courses" value="JavaEE"> JavaEE
+	<br><br>
+	<input type="submit" value="Submit"/>
+	</form>
+</body>
+</html>
